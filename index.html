@@ -77,41 +77,74 @@
 
     <!-- ======= HERO ======= -->
     <section class="hero" id="hero">
-      <div class="hero__bg">
-        <img src="assets/images/backgrounds/cassava.jpg" alt="Cassava field" />
-      </div>
-      <div class="hero__overlay"></div>
-      <div class="container">
-        <div class="hero__content fade-up">
-          <div class="hero__label">
-            <i class="fas fa-leaf"></i>
-            Integrated Cassava Processing &amp; Manufacturing
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <div class="hero__bg">
+          <img src="assets/images/backgrounds/cassava.jpg" alt="Cassava field" />
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span>Kofo Agro</span><br />Allied Ltd.
+            </h1>
+            <p class="hero__desc">
+              We operate across the full value chain from raw material sourcing and controlled processing to hygienic packaging and reliable distribution ensuring consistency, quality, and dependable supply for our customers.
+            </p>
+            <div class="hero__buttons">
+              <a href="about.html" class="btn btn--primary btn--lg">Learn More <i class="fas fa-arrow-right"></i></a>
+              <a href="contact.html" class="btn btn--outline btn--lg">Contact Us</a>
+            </div>
           </div>
-          <h1 class="hero__title">
-            <span>Kofo Agro</span><br />Allied Ltd.
-          </h1>
-          <p class="hero__desc">
-            We operate across the full value chain from raw material sourcing and controlled processing to hygienic packaging and reliable distribution ensuring consistency, quality, and dependable supply for our customers.
-          </p>
-          <div class="hero__buttons">
-            <a href="about.html" class="btn btn--primary btn--lg">Learn More <i class="fas fa-arrow-right"></i></a>
-            <a href="contact.html" class="btn btn--outline btn--lg">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <div class="hero__bg">
+          <img src="assets/images/resources/cassava-processing.jpg" alt="Processing facility" />
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span>Quality</span> You Can Trust
+            </h1>
+            <p class="hero__desc">
+              Our integrated quality management system governs all stages of production to ensure product integrity, safety, and batch-to-batch consistency.
+            </p>
+            <div class="hero__buttons">
+              <a href="products.html" class="btn btn--primary btn--lg">View Products <i class="fas fa-arrow-right"></i></a>
+              <a href="contact.html" class="btn btn--outline btn--lg">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide">
+        <div class="hero__bg">
+          <img src="assets/images/resources/cassavafarm.jpg" alt="Cassava farm" />
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span>Empowering</span> Communities
+            </h1>
+            <p class="hero__desc">
+              By supporting local farmers through stable demand and agricultural partnerships, we help create jobs and strengthen rural livelihoods.
+            </p>
+            <div class="hero__buttons">
+              <a href="why-kofo.html" class="btn btn--primary btn--lg">Why Choose Us <i class="fas fa-arrow-right"></i></a>
+              <a href="contact.html" class="btn btn--outline btn--lg">Contact Us</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======= TRUST BANNER ======= -->
-    <section class="trust-banner">
-      <div class="container">
-        <div class="trust-banner__inner fade-up">
-          <div class="trust-banner__icon"><i class="fas fa-check"></i></div>
-          <p class="trust-banner__text">
-            We transform cassava into value-added products that serve multiple industries. Our operations are designed to deliver safe, standardized, and high-performance products that meet both local and export market requirements.
-          </p>
-        </div>
-      </div>
-    </section>
+
 
     <!-- ======= ABOUT SECTION ======= -->
     <section class="section" id="about">
@@ -375,6 +408,17 @@
       document.querySelectorAll('.fade-up, .fade-in, .stagger').forEach(el => {
         observer.observe(el);
       });
+
+      // Hero Slider Setup
+      const slides = document.querySelectorAll('.hero-slide');
+      if (slides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % slides.length;
+          slides[currentSlide].classList.add('active');
+        }, 5100);
+      }
     </script>
   </body>
 </html>
