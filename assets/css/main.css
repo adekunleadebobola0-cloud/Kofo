@@ -1399,15 +1399,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 24px;
   }
 
+  .hero__content {
+    text-align: center;
+  }
+
   .hero__buttons {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    gap: 12px;
   }
 
   .hero__buttons .btn {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    padding: 12px 24px;
+    font-size: 0.95rem;
   }
 
   .cta-banner {
