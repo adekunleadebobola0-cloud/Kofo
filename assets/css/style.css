@@ -1,0 +1,8 @@
+@media screen and (max-width: 580px) {
+  .feature-box {
+    display: none;
+  }
+  .offer-banner {
+    padding-top: 1.5em;
+  }
+}
