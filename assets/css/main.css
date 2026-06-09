@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .section {
@@ -1390,12 +1390,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .hero__desc {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
   }
 
   .hero__buttons {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .cta-banner {
